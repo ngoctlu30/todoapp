@@ -1,0 +1,62 @@
+.addTodo {
+  width: 20%;
+  height: 70px;
+  background-color: #CCB333;
+  margin: 20px auto;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+.addTodo_icons, .addTodo_icons::before {
+  position: relative;
+  background-color: aqua;
+  height: 5px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.addTodo_icons {
+  transition: all .2s;
+}
+
+.addTodo_icons::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  border-radius: 4px;
+}
+
+.addTodo_icons:hover{
+  transform: translateY(-5px);
+}
+.addTodo_icons::before {
+  transform: rotate(90deg);
+}
+.addTodo_checkbox {
+  display: none;
+}
+.add_button {
+  color: #000;
+  width: 1.6rem;
+  height: 1.6rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.add_button:hover {
+  width: 2rem;
+  height: 2rem;
+}

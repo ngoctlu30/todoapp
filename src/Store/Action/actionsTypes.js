@@ -1,0 +1,32 @@
+export const LOGIN_START = 'LOGIN_START';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAIL = 'LOGIN_FAIL';
+
+export const SIGNUP_START = 'SIGNUP_START';
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
+export const SIGNUP_FAIL = 'SIGNUP_FAIL'
+
+export const LOGOUT = 'LOGOUT';
+
+export const SETAUTH_REDIRECT_PATH = 'SETAUTH_REDIRECT_PATH';
+
+export const FETCH_DATA_START = 'FETCH_DATA';
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAIL = 'FETCH_DATA_FAIL';
+
+export const START_ADD_TODO = 'START_ADD_TODO';
+export const ADD_TODO_SUCCESS = 'ADD_TODO_SUCCESS';
+export const ADD_TODO_FAIL = 'ADD_TODO_FAIL';
+
+export const SHOW_MODAL = 'MODAL_SHOW';
+export const MODAL_CLOSE = 'MODAL_CLOSE';
+
+export const START_EDIT_TODO = 'START_EDIT_TODO';
+export const EDIT_TODO_SUCCESS = 'EDIT_TODO_SUCCESS';
+export const EDIT_TODO_FAIL = 'EDIT_TODO_FAIL';
+
+export const START_DELETE_TODO = 'START_DELETE_TODO';
+export const DELETE_TODO_SUCCESS = 'DELETE_TODO_SUCCESS';
+export const DELETE_TODO_FAIL = 'DELETE_TODO_FAIL';
+
+export const TOGGLE_TODO = 'TOGGLE_TODO';

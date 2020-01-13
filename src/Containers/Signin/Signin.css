@@ -1,0 +1,46 @@
+.Form {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 3px #ccc;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(197, 204, 131);
+  border-radius: 16px;
+}
+
+.Form span {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.Form button {
+  width: 20%;
+  height: 36px;
+  margin: 18px 0;
+  border: none;
+  border-radius: 16px;
+  margin-left: 40%;
+  background-color: rgb(110, 155, 113);
+  transition: all .3s;
+}
+button:focus {
+  outline: none;
+}
+
+.Form button:hover {
+  background-color: rgb(90, 138, 93);
+  transform: translateY(-5px);
+  box-shadow: 0 3px 4px rgb(90, 138, 93);
+}
+
+.ErrMes {
+  background-color: red;
+  text-align: center;
+}
+
+.Form a {
+  margin-top: 20px;
+  text-align: center;
+}

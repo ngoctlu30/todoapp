@@ -1,0 +1,141 @@
+.AddTodo {
+  width: 40%;
+  height: 200px;
+  background-color: #222222;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.X_button {
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.X_icon {
+  position: absolute;
+  background-color: aqua;
+  height: 5px;
+  width: 1rem;
+  display: inline-block;
+  border-radius: 4px;
+  right: .4rem;
+  transform: rotate(135deg);
+  top: .7rem;
+}
+
+.X_icon::before {
+  display: inline-block;
+  background-color:aqua ;
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 1rem;
+  left: 0;
+  border-radius: 4px;
+  transform: rotate(-270deg);
+}
+
+.AddTodo_Form {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.AddTodo_Form_input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+}
+.AddTodo_Form_input::placeholder {
+  color: transparent;
+}
+.AddTodo_Form_input:placeholder-shown ~ .AddTodo_Form_label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.AddTodo_Form_label {
+  position: absolute;
+  top: 20px;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
+}
+
+.AddTodo_Form_input:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid teal;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e #38ef7d);
+  border-image-slice: 1;
+}
+
+.AddTodo_Form_input:focus ~ .AddTodo_Form_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight:700;   
+}
+
+.AddTodo_Buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.btn {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  border: 2px solid aqua;
+  background-color: aqua;
+  font-weight: bold;
+  transition: all .3s;
+}
+.btn:hover,
+.btn:active {
+  transform: translateY(-5px);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+ display: none;
+}
+
+
+

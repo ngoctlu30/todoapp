@@ -1,0 +1,89 @@
+.Todo {
+  width: 50%;
+  height: 120px;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 30px #ccc;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  margin-top: 60px;
+  align-items: center;
+  background-color: #CCB333;
+  border-radius: 8px;
+  position: relative;
+}
+
+.Todo:last-child {
+  margin-bottom: 20px;
+}
+.canToggle {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 100%;
+}
+.canToggle:hover {
+  cursor: pointer;
+  background-color: rgb(221, 190, 35);
+}
+.infor {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.infor div {
+  height: 20px;
+  font-size: 20px;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 50%;
+  justify-content: center ;
+  align-items: center;
+}
+
+.action img {
+  height: 20px;
+  padding: 0 10px;
+}
+
+.action img:hover {
+  cursor: pointer;
+}
+.bgDone {
+  background-color: #ccc;
+  opacity: .6;
+}
+
+.lineDone, .lineDone::before {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: relative;
+}
+.lineDone {
+  transform: rotate(169deg);
+}
+
+.lineDone::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  transform: rotate(-339deg);
+}
+
+.Done {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
