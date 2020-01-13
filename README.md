@@ -1,5 +1,5 @@
-# TodoApp with React, redux and Firebase API, Firebase Authenticate
-A simple todolist app
+# TodoApp 
+A simple todolist app for practise React, redux bombined with Firebase API and Firebase Authenticate
 ## Development
   Clone responsitory and
 Run:
