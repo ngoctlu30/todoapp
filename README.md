@@ -1,8 +1,9 @@
-#TodoApp with React, redux and Firebase API, Firebase Authenticate
+# TodoApp with React, redux and Firebase API, Firebase Authenticate
 A simple todolist app
-##Development
+## Development
   Clone responsitory and
 Run:
   ```
-    npm install  
+    npm install     #install package 
+    npm start       #start local host react
   ```
