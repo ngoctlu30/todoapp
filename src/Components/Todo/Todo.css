@@ -8,7 +8,7 @@
   margin: auto;
   margin-top: 60px;
   align-items: center;
-  background-color: #CCB333;
+  background-color: #adba81;
   border-radius: 8px;
   position: relative;
 }
@@ -25,6 +25,7 @@
 .canToggle:hover {
   cursor: pointer;
   background-color: rgb(221, 190, 35);
+  border-radius: 8px 8px 0 0;
 }
 .infor {
   width: 100%;
@@ -58,32 +59,5 @@
 .action img:hover {
   cursor: pointer;
 }
-.bgDone {
-  background-color: #ccc;
-  opacity: .6;
-}
 
-.lineDone, .lineDone::before {
-  width: 100%;
-  height: 1px;
-  background-color: black;
-  position: relative;
-}
-.lineDone {
-  transform: rotate(169deg);
-}
 
-.lineDone::before {
-  content: "";
-  position: absolute;
-  background-color: black;
-  transform: rotate(-339deg);
-}
-
-.Done {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}

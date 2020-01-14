@@ -11,10 +11,14 @@ import Logout from './Containers/Logout/Logout';
 import Homepage from './Containers/Homepage/Homepage';
 import * as actions from './Store/Action/index';
 import Footer from './Containers/Footer/Footer';
+
+require('dotenv').config();
+
 class App extends React.Component {
 
   componentDidMount() {
     this.props.onTryAutoSignIn();
+    console.log(process.env)
   }
 
   render() {
@@ -48,6 +52,7 @@ class App extends React.Component {
     );
   }
 }
+
 
 const mapStateToProps = state => {
   return {

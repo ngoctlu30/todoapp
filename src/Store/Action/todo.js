@@ -1,5 +1,5 @@
 import * as actionTypes from './actionsTypes';
-import axios from 'axios';
+import axios from '../../config';
 
 export const addTodoStart = () => {
   return {
@@ -83,12 +83,12 @@ export const toggleTodo = (todo) => {
 export const deleteTodo = (id, userId) => {
   return async dispatch => {
     dispatch(startDel());
-    await  axios.get('https://todoapp-68155.firebaseio.com/todo.json')
+    await  axios.get('/todo.json')
       .then(res => {
         for(let key in res.data) {
           if(res.data[key].time === id && res.data[key].userId === userId) {
             
-            axios.delete('https://todoapp-68155.firebaseio.com/todo/'+ key +'.json')  
+            axios.delete('/todo/'+ key +'.json')  
               
               .then(res1 => {
                 dispatch(fetchData(userId));
@@ -123,7 +123,7 @@ export const addTodo = (todo, userId) => {
       time: nd.toLocaleString(),
       done: false
     }
-    let url = 'https://todoapp-68155.firebaseio.com/todo.json';
+    let url = '/todo.json';
     await axios.post(url, data)
       .then(res => {
         dispatch(addTodoSuccess(JSON.parse(res.config.data).todo));
@@ -139,11 +139,11 @@ export const addTodo = (todo, userId) => {
 }
 
 export const toggle = (id) => async dispatch => {
-  await axios.get('https://todoapp-68155.firebaseio.com/todo.json')
+  await axios.get('/todo.json')
     .then(res => {
       for(let key in res.data) {
         if(res.data[key].time === id) {
-          axios.patch(`https://todoapp-68155.firebaseio.com/todo/${key}.json`, {
+          axios.patch(`/todo/${key}.json`, {
             ...res.data[key], done: !res.data[key].done
           }).then(res => {
             
@@ -156,7 +156,7 @@ export const toggle = (id) => async dispatch => {
 
 export const fetchData = (userId) => async dispatch => {
     dispatch(fetchDataStart())
-    await axios.get('https://todoapp-68155.firebaseio.com/todo.json')
+    await axios.get('/todo.json')
       .then(res => {
         const fetchData = [];
         for(let key in res.data) {

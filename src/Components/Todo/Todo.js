@@ -7,18 +7,13 @@ import DelIcon from '../../Assest/Image/Image/delete.png'
 const todo = (props) => {
   
   return (
-    <div     
-      className={!props.done ? [classes.Todo] : [classes.Todo, classes.bgDone].join(" ")}>
-      
-
-
+    <div className={classes.Todo}>
       <div className={classes.canToggle} onClick={props.toggleHandler}>
-        <div  className={classes.infor}>
+        <div style={{
+          textDecoration: props.done ? 'line-through' : 'none'
+        }}  className={classes.infor}>
           <div>{props.todo}</div>
           <div>{props.time}</div>
-        </div>
-        <div className={ props.done ? classes.Done : null}>
-          <span className={classes.lineDone}></span>
         </div>
       </div>
 
